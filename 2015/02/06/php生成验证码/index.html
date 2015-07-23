@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>php生成验证码 | 糯米馨的自留地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="直接上网址 亲测好使！http://blog.csdn.net/leijiankun111/article/details/7256587作为个懒人 我要全部黏贴一下 哈哈哈 以后就不用找咯">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php生成验证码">
+<meta property="og:url" content="http://yoursite.com/2015/02/06/php生成验证码/index.html">
+<meta property="og:site_name" content="糯米馨的自留地">
+<meta property="og:description" content="直接上网址 亲测好使！http://blog.csdn.net/leijiankun111/article/details/7256587作为个懒人 我要全部黏贴一下 哈哈哈 以后就不用找咯">
+<meta property="og:updated_time" content="2015-07-20T06:48:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php生成验证码">
+<meta name="twitter:description" content="直接上网址 亲测好使！http://blog.csdn.net/leijiankun111/article/details/7256587作为个懒人 我要全部黏贴一下 哈哈哈 以后就不用找咯">
+  
+    <link rel="alternative" href="/atom.xml" title="糯米馨的自留地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7sbkqu.com1.z0.glb.clouddn.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4219fe391086c4deee240ad4925736b6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://7sbkqu.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">糯米馨</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">无可救药的声控斯基</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/index.html">所有文章</a></li>
+				        
+							<li><a href="/tags/亲测/index.html">亲测</a></li>
+				        
+							<li><a href="/tags/前端/index.html">前端</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/亲测/" style="font-size: 15px;">亲测</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/剧集/" style="font-size: 10px;">剧集</a> <a href="/tags/后端/" style="font-size: 10px;">后端</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/声控/" style="font-size: 10px;">声控</a> <a href="/tags/随拍/" style="font-size: 15px;">随拍</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">无可救药的声控斯基</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">糯米馨</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7sbkqu.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">糯米馨</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">无可救药的声控斯基</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/index.html">所有文章</a></li>
+		        
+					<li><a href="/tags/亲测/index.html">亲测</a></li>
+		        
+					<li><a href="/tags/前端/index.html">前端</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-php生成验证码" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/02/06/php生成验证码/" class="article-date">
+  	<time datetime="2015-02-06T02:46:47.000Z" itemprop="datePublished">2015-02-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      php生成验证码
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后端/">后端</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>直接上网址 亲测好使！<br><a href="http://blog.csdn.net/leijiankun111/article/details/7256587" target="_blank" rel="external">http://blog.csdn.net/leijiankun111/article/details/7256587</a><br>作为个懒人 我要全部黏贴一下 哈哈哈 以后就不用找咯<br><a id="more"></a></p>
+<h3 id="testcode-php">testcode.php</h3><pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span> /&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>验证码 走起<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css">
+        <span class="class">.wrong</span><span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">red</span></span>;}</span>
+        <span class="class">.right</span><span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">black</span></span>;}</span>
+    </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"../js/jquery-1.10.2.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+        <span class="function"><span class="keyword">function</span> <span class="title">check_code</span>(<span class="params"></span>)</span>{
+            <span class="keyword">var</span> URL = <span class="string">"checkCode.php"</span>;
+            <span class="keyword">var</span> RequestData = <span class="string">'action=checkcode&amp;code='</span>+$(<span class="string">'#R-code'</span>).val();
+            $.ajax({
+                type:<span class="string">'POST'</span>,
+                url:URL,
+                data:RequestData,
+                <span class="keyword">async</span>:<span class="literal">false</span>,
+                cache: <span class="literal">false</span>,
+                success:<span class="function"><span class="keyword">function</span>(<span class="params">responseData</span>)</span>{
+                    <span class="keyword">var</span> Result = <span class="built_in">eval</span>(<span class="string">'('</span>+responseData+<span class="string">')'</span>);
+                    <span class="keyword">if</span>(Result.verifycode==<span class="string">'Y'</span>){
+                        $(<span class="string">'#info-code'</span>).removeClass().html(<span class="string">'验证码输入正确'</span>).addClass(<span class="string">"right"</span>);
+                    }<span class="keyword">else</span> {
+                        $(<span class="string">'#info-code'</span>).removeClass().html(<span class="string">'验证码输入错误'</span>).addClass(<span class="string">"wrong"</span>);
+                    }
+                }
+            });
+        }
+        <span class="function"><span class="keyword">function</span> <span class="title">refresh_code</span>(<span class="params"></span>)</span>{
+            <span class="built_in">document</span>.getElementById(<span class="string">"imgcode"</span>).src=<span class="string">"createCode.php?a="</span>+<span class="built_in">Math</span>.random();
+        }
+    </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+<span class="php"><span class="preprocessor">&lt;?php</span> 
+<span class="function"><span class="keyword">function</span> <span class="title">getCodeHtml</span><span class="params">()</span></span>{
+    <span class="variable">$codehtml</span>=<span class="string">'&lt;div id="codetest"&gt;'</span>
+             .<span class="string">'&lt;h2&gt;Code Test&lt;/h2&gt;'</span>
+             .<span class="string">'&lt;label for="R-code"&gt;Code：&lt;/label&gt;'</span>
+             .<span class="string">'&lt;img id="imgcode" src="createCode.php" alt="验证码" /&gt;&lt;a href="javascript:refresh_code()"&gt;看不清？换一张&lt;/a&gt;&lt;br&gt;'</span>
+             .<span class="string">'&lt;input id="R-code"&gt;&lt;span id="info-code"&gt;&lt;/span&gt;&lt;br&gt;'</span>
+             .<span class="string">'&lt;input type="button" onclick="check_code();" value="Check"&gt;'</span>
+             .<span class="string">'&lt;/div&gt;'</span>;
+    <span class="keyword">echo</span> <span class="variable">$codehtml</span>;
+    }
+<span class="keyword">echo</span> getCodeHtml();
+ <span class="preprocessor">?&gt;</span></span>    
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><h3 id="createCode-php">createCode.php</h3><pre><code>&lt;?php <span class="comment">//生成验证码</span>
+     session_start();
+     <span class="variable">$codeNum</span>=<span class="number">4</span>;      <span class="comment">//验证码个数</span>
+     <span class="variable">$codeWidth</span>=<span class="number">80</span>;   <span class="comment">//验证码宽度</span>
+     <span class="variable">$codeHeight</span>=<span class="number">18</span>;  <span class="comment">//验证码高度</span>
+     <span class="variable">$code</span>=<span class="string">' '</span>;
+     <span class="keyword">for</span>(<span class="variable">$i</span>=<span class="number">0</span>;<span class="variable">$i</span>&lt;<span class="variable">$codeNum</span>;<span class="variable">$i</span>++){  <span class="comment">//生成验证码</span>
+         <span class="keyword">switch</span>(<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">2</span>))
+         {
+             <span class="keyword">case</span> <span class="number">0</span>:<span class="variable">$code</span>[<span class="variable">$i</span>]=chr(<span class="keyword">rand</span>(<span class="number">48</span>,<span class="number">57</span>)); <span class="keyword">break</span>;   <span class="comment">//数字</span>
+             <span class="keyword">case</span> <span class="number">1</span>:<span class="variable">$code</span>[<span class="variable">$i</span>]=chr(<span class="keyword">rand</span>(<span class="number">65</span>,<span class="number">90</span>)); <span class="keyword">break</span>;   <span class="comment">//大写字母</span>
+             <span class="keyword">case</span> <span class="number">2</span>:<span class="variable">$code</span>[<span class="variable">$i</span>]=chr(<span class="keyword">rand</span>(<span class="number">97</span>,<span class="number">122</span>));<span class="keyword">break</span>;   <span class="comment">//小写字母</span>
+             }
+         }
+     <span class="variable">$_SESSION</span>[<span class="string">"VerifyCode"</span>]=<span class="variable">$code</span>;
+     <span class="variable">$image</span>=imagecreate(<span class="variable">$codeWidth</span>,<span class="variable">$codeHeight</span>);
+     imagecolorallocate(<span class="variable">$image</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>);
+     <span class="comment">//生成干扰像素</span>
+     <span class="keyword">for</span>(<span class="variable">$i</span>=<span class="number">0</span>;<span class="variable">$i</span>&lt;<span class="number">80</span>;<span class="variable">$i</span>++){
+         <span class="variable">$dis_color</span>=imagecolorallocate(<span class="variable">$image</span>,<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">255</span>),<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">255</span>),<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">255</span>));
+         imagesetpixel(<span class="variable">$image</span>,<span class="keyword">rand</span>(<span class="number">1</span>,<span class="variable">$codeWidth</span>),<span class="keyword">rand</span>(<span class="number">1</span>,<span class="variable">$codeHeight</span>),<span class="variable">$dis_color</span>);
+         }
+     <span class="comment">//打印字符到图像</span>
+     <span class="keyword">for</span>(<span class="variable">$i</span>=<span class="number">0</span>;<span class="variable">$i</span>&lt;<span class="variable">$codeNum</span>;<span class="variable">$i</span>++){
+         <span class="variable">$char_color</span>=imagecolorallocate(<span class="variable">$image</span>,<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">255</span>),<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">255</span>),<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">255</span>));
+         imagechar(<span class="variable">$image</span>,<span class="number">60</span>,(<span class="variable">$codeWidth</span>/<span class="variable">$codeNum</span>)<span class="variable">*$</span>i,<span class="keyword">rand</span>(<span class="number">0</span>,<span class="number">5</span>),<span class="variable">$code</span>[<span class="variable">$i</span>],<span class="variable">$char_color</span>);
+         }
+     header(<span class="string">"Content-type:image/png"</span>);
+     imagepng(<span class="variable">$image</span>);      <span class="comment">//输出图像到浏览器</span>
+     imagedestroy(<span class="variable">$image</span>);  <span class="comment">//释放资源</span>
+?&gt;
+</code></pre><h3 id="checkCode-php">checkCode.php</h3><pre><code><span class="php"><span class="preprocessor">&lt;?php</span>   
+     session_start();  
+     @<span class="variable">$postcode</span> = <span class="variable">$_POST</span>[<span class="string">'code'</span>];  
+     <span class="keyword">if</span>((strtoupper(<span class="variable">$postcode</span>)) == strtoupper((<span class="variable">$_SESSION</span>[<span class="string">"VerifyCode"</span>])))   
+     <span class="keyword">echo</span> <span class="string">'{"verifycode":"Y"}'</span>;  
+     <span class="keyword">else</span> <span class="keyword">echo</span> <span class="string">'{"verifycode":"N"}'</span>;  
+<span class="preprocessor">?&gt;</span></span>
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/03/20/angular-node-mongodb/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          angular.js + node.js +mongodb教程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/21/fis-handlerbars/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">fis + handlerbars 绝配！</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="php生成验证码" data-title="php生成验证码" data-url="http://yoursite.com/2015/02/06/php生成验证码/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"nuomixin"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 糯米馨
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+          由<a href="http://www.qiniu.com/">七牛云</a>提供静态存储
+          沪ICP备15018744号-1
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script>
+	var yiliaConfig = {
+		fancybox: false,
+		mathjax: false,
+		animate: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

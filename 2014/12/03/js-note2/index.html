@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS笔记2 | 糯米馨的自留地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="笔记零零散散的记在各地方，再来一发。还是那句话，到处收集的，非原创。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS笔记2">
+<meta property="og:url" content="http://yoursite.com/2014/12/03/js-note2/index.html">
+<meta property="og:site_name" content="糯米馨的自留地">
+<meta property="og:description" content="笔记零零散散的记在各地方，再来一发。还是那句话，到处收集的，非原创。">
+<meta property="og:updated_time" content="2015-07-20T06:48:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS笔记2">
+<meta name="twitter:description" content="笔记零零散散的记在各地方，再来一发。还是那句话，到处收集的，非原创。">
+  
+    <link rel="alternative" href="/atom.xml" title="糯米馨的自留地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7sbkqu.com1.z0.glb.clouddn.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4219fe391086c4deee240ad4925736b6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://7sbkqu.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">糯米馨</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">无可救药的声控斯基</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives/index.html">所有文章</a></li>
+				        
+							<li><a href="/tags/亲测/index.html">亲测</a></li>
+				        
+							<li><a href="/tags/前端/index.html">前端</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/tips/" style="font-size: 10px;">tips</a> <a href="/tags/亲测/" style="font-size: 15px;">亲测</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/剧集/" style="font-size: 10px;">剧集</a> <a href="/tags/后端/" style="font-size: 10px;">后端</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/声控/" style="font-size: 10px;">声控</a> <a href="/tags/随拍/" style="font-size: 15px;">随拍</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">无可救药的声控斯基</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">糯米馨</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7sbkqu.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">糯米馨</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">无可救药的声控斯基</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives/index.html">所有文章</a></li>
+		        
+					<li><a href="/tags/亲测/index.html">亲测</a></li>
+		        
+					<li><a href="/tags/前端/index.html">前端</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-js-note2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/12/03/js-note2/" class="article-date">
+  	<time datetime="2014-12-03T09:48:43.000Z" itemprop="datePublished">2014-12-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS笔记2
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>笔记零零散散的记在各地方，再来一发。<br>还是那句话，到处收集的，非原创。<br><a id="more"></a></p>
+<h2 id="链接跳转">链接跳转</h2><h4 id="判断PC和iphone_并用根据浏览器语言跳转页面">判断PC和iphone 并用根据浏览器语言跳转页面</h4><pre><code><span class="keyword">var</span> lang=navigator.userLanguage||navigator.language;
+<span class="keyword">var</span> $C=location.hash;
+<span class="keyword">if</span> (navigator.platform.indexOf(<span class="string">'iPhone'</span>) != - <span class="number">1</span> &amp;&amp; $C!=<span class="string">"#pc"</span>){
+    mobile_browse_lang();
+}<span class="keyword">else</span>{
+    pc_browse_lang();
+}
+<span class="function"><span class="keyword">function</span> <span class="title">pc_browse_lang</span>(<span class="params"></span>)</span>{
+    <span class="keyword">var</span> type=navigator.appName;
+    <span class="keyword">if</span> (type==<span class="string">"Netscape"</span>){
+        <span class="keyword">var</span> lang = navigator.language;
+    }
+    <span class="keyword">else</span>{
+        <span class="keyword">var</span> lang = navigator.userLanguage;
+    }
+    <span class="keyword">var</span> lang = lang.substr(<span class="number">0</span>,<span class="number">2</span>);
+
+    <span class="keyword">var</span> lang_key = [<span class="string">'key1'</span>, <span class="string">'key2'</span>, <span class="string">'key3'</span>, <span class="string">'key4'</span>, <span class="string">'key5'</span>];<span class="comment">//浏览器语言代码，若浏览器语言为英语，则对应为'en';</span>
+    <span class="comment">// var lang_type = $.inArray(lang, lang_key); jquery写法</span>
+
+
+    <span class="function"><span class="keyword">function</span> <span class="title">indexOf</span>(<span class="params">lang_key, lang</span>) </span>{
+      <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lang_key.length; i++) {
+        <span class="keyword">if</span> (lang_key[i] === lang)
+          <span class="keyword">return</span> i;
+      }
+      <span class="keyword">return</span> -<span class="number">1</span>;
+    }
+
+    <span class="keyword">var</span> lang_type = indexOf(lang_key, lang);
+
+
+    <span class="keyword">if</span>(lang_type == -<span class="number">1</span>){
+        <span class="built_in">window</span>.location.href = <span class="string">'xxx_key0.html'</span>;<span class="comment">//若不在  lang_key 数组里面 则默认为 key0</span>
+    } <span class="keyword">else</span> {
+        <span class="built_in">window</span>.location.href = <span class="string">'xxx_'</span>+ lang +<span class="string">'.html'</span>;
+    }
+
+}
+</code></pre><h2 id="响应式相关">响应式相关</h2><h4 id="用js进行获取窗口宽度，进行对应处理">用js进行获取窗口宽度，进行对应处理</h4><pre><code><span class="comment">//牛逼版</span>
+<span class="keyword">if</span><span class="params">(window.matchMedia)</span>{
+    var mq = window.matchMedia<span class="params">(<span class="string">"(min-width: 500px)"</span>)</span>;   
+    mq.addListener<span class="params">(WidthChange)</span>;   
+    WidthChange<span class="params">(mq)</span>; 
+}   
+
+<span class="function"><span class="keyword">function</span> <span class="title">WidthChange</span><span class="params">(mq)</span>{</span>
+            <span class="keyword">if</span><span class="params">(mq.matches)</span>{
+
+            <span class="comment">//此时window的宽度大于500px</span>
+
+        }<span class="keyword">else</span>{
+
+            <span class="comment">//此时window的宽度小于500px</span>
+
+        }  
+}
+
+<span class="comment">//正常版</span>
+var resizeMethod = <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+    <span class="keyword">if</span> <span class="params">(document.body.clientWidth &lt; <span class="number">768</span>)</span> {
+        console.<span class="built_in">log</span><span class="params">('mobile')</span>;
+    }
+};
+
+<span class="comment">//绑定事件处理函数到resize事件</span>
+window.addEventListener<span class="params">(<span class="string">"resize"</span>, resizeMethod, <span class="literal">true</span>)</span>;  
+</code></pre><h4 id="安卓手机分辨率判断计算">安卓手机分辨率判断计算</h4><p>（自己算的 用于pc端和手机端是同一个页面的情况 等比缩放  这个大家随便看看 因为我也已经看不懂了 啊啊啊 当时的页面找不到了 oh no）</p>
+<pre><code><span class="keyword">var</span> body = <span class="built_in">document</span>.querySelector(<span class="string">'body'</span>);
+<span class="keyword">var</span> w = screen.width;<span class="comment">//屏幕宽度</span>
+<span class="keyword">var</span> h = screen.height;<span class="comment">//屏幕高度</span>
+<span class="keyword">var</span> rat = <span class="built_in">window</span>.devicePixelRatio;<span class="comment">//设备像素比  </span>
+<span class="keyword">var</span> s_w; 
+<span class="keyword">var</span> c_w = <span class="built_in">document</span>.documentElement.clientWidth;<span class="comment">//可见区域宽度</span>
+<span class="keyword">var</span> c_h = <span class="built_in">document</span>.documentElement.clientHeight;<span class="comment">//可见区域高度</span>
+<span class="keyword">if</span>(w == c_w){<span class="comment">//认为是pc端</span>
+    rat = <span class="number">1</span>;
+}
+<span class="comment">//取到宽度（即取到较小的一个边的宽度）</span>
+<span class="keyword">if</span>( w &gt; h){<span class="comment">//横屏</span>
+    s_w = h; 
+}<span class="keyword">else</span>{
+    s_w = w;
+}   
+caculate();         
+<span class="function"><span class="keyword">function</span> <span class="title">caculate</span>(<span class="params"></span>)</span>{
+    <span class="keyword">var</span> wrap_w;
+    <span class="keyword">if</span>(c_w &lt; c_h){
+        wrap_w = c_w;
+    }<span class="keyword">else</span>{
+        wrap_w = s_w/rat;
+    }
+    <span class="keyword">if</span>(wrap_w &gt; <span class="number">960</span>){
+        wrap_w =<span class="number">960</span>;
+    }
+    <span class="keyword">var</span> fs = <span class="built_in">parseInt</span>(wrap_w/<span class="number">9.6</span>);
+    body.style.fontSize = fs+<span class="string">'px'</span>;
+
+}
+</code></pre><h2 id="数组相关">数组相关</h2><h4 id="查找数组符合项">查找数组符合项</h4><pre><code><span class="comment">//jQuery</span>
+$.inArray(item, <span class="keyword">array</span>);                   
+<span class="comment">//ie8+</span>
+<span class="function"><span class="keyword">function</span> <span class="title">indexOf</span><span class="params">(array, item)</span> </span>{
+  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">array</span>.length; i++) {
+    <span class="keyword">if</span> (<span class="keyword">array</span>[i] === item)
+      <span class="keyword">return</span> i;
+  }
+  <span class="keyword">return</span> -<span class="number">1</span>;
+}
+indexOf(<span class="keyword">array</span>, item);               
+<span class="comment">//ie9+</span>
+<span class="keyword">array</span>.indexOf(item);
+</code></pre><h4 id="循环监听">循环监听</h4><pre><code><span class="reserved">var</span> mydivs = <span class="built_in">document</span>.getElementById(<span class="string">"box"</span>).getElementsByTagName(<span class="string">"div"</span>);
+<span class="keyword">for</span>(<span class="reserved">var</span> i = <span class="number">0</span>;i&lt;=mydivs.length;i++){
+    mydivs[i].<span class="literal">no</span> = i;
+    mydivs[i].onclick = <span class="reserved">function</span>(){
+        <span class="built_in">console</span>.log(<span class="string">'我是第'</span> + <span class="keyword">this</span>.<span class="literal">no</span> + <span class="string">'个'</span>);
+}
+</code></pre><h2 id="事件类">事件类</h2><h4 id="事件委托">事件委托</h4><pre><code><span class="list">(<span class="keyword">function</span><span class="list">()</span><span class="collection">{
+    var resources = document.getElementById<span class="list">(<span class="keyword">'resources'</span>)</span><span class="comment">;</span>
+    resources.addEventListener<span class="list">(<span class="keyword">'click'</span>,handler,<span class="literal">false</span>)</span><span class="comment">;</span>
+    function handler<span class="list">(<span class="keyword">e</span>)</span><span class="collection">{
+        var x = e.target; // get the link tha
+        if<span class="list">(<span class="keyword">x.nodeName.toLowerCase</span><span class="list">()</span> === 'a')</span><span class="collection">{
+            alert<span class="list">(<span class="keyword">'Event</span> delegation:' + x)</span><span class="comment">;</span>
+            e.preventDefault<span class="list">()</span><span class="comment">;</span>
+        }</span>
+    }</span><span class="comment">;</span>
+}</span>)</span><span class="list">()</span><span class="comment">;</span>
+</code></pre><h2 id="模块化">模块化</h2><h4 id="匿名函数和模块化">匿名函数和模块化</h4><pre><code><span class="comment">//方法一</span>
+<span class="keyword">var</span> myApplication = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="keyword">var</span> name = <span class="string">'Chris'</span>;
+    <span class="keyword">var</span> age = <span class="string">'34'</span>;
+    <span class="keyword">var</span> status = <span class="string">'single'</span>;
+    <span class="function"><span class="keyword">function</span> <span class="title">createMember</span><span class="params">()</span></span>{
+        <span class="comment">// [...]</span>
+    }
+    <span class="function"><span class="keyword">function</span> <span class="title">getMemberDetails</span><span class="params">()</span></span>{
+        <span class="comment">// [...]</span>
+    }
+    <span class="keyword">return</span>{
+        create:createMember,
+        <span class="keyword">get</span>:getMemberDetails
+    }
+}();
+<span class="comment">//现在写成 myApplication.get()和 </span>
+<span class="comment">//myApplication.create() 就行了。</span>
+
+<span class="comment">//方法二</span>
+<span class="keyword">var</span> module1 = (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="keyword">var</span> _count = <span class="number">0</span>;
+    <span class="keyword">var</span> m1 = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="comment">//...</span>
+    };
+    <span class="keyword">var</span> m2 = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+        <span class="comment">//...</span>
+    };
+    <span class="keyword">return</span> {
+        m1 : m1,
+        m2 : m2
+    };
+})();
+</code></pre><h4 id="js对象字面量">js对象字面量</h4><pre><code>var literal = {
+    add: <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        alert<span class="params">(<span class="string">"add"</span>)</span>;
+    },
+    del: <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        alert<span class="params">(<span class="string">"delete"</span>)</span>;
+    },
+    update: <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        alert<span class="params">(<span class="string">"update"</span>)</span>;
+    },
+    name: <span class="string">"zhangsan"</span>,
+    callLiteral: <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        <span class="comment">// 对于当前字面量对象的调用，要加this关键字</span>
+        this.add<span class="params">()</span>;
+    }
+};
+
+<span class="comment">//拿js对象字面量可以用 for(变量 in 对象) </span>
+&lt;div id=<span class="string">"demo"</span>&gt;
+
+&lt;/div&gt;
+&lt;p&gt;
+    &lt;script type=<span class="string">"text/javascript"</span>&gt;
+        var mycars ={a:<span class="string">"a1"</span>,b:<span class="string">"b1"</span>,c:<span class="string">"c1"</span>,d:<span class="string">"d1"</span>};
+        var <span class="built_in">str</span>='{a:<span class="string">"a1"</span>,b:<span class="string">"b1"</span>,c:<span class="string">"c1"</span>,d:<span class="string">"d1"</span>}';
+        var temp=<span class="string">""</span>;
+        <span class="keyword">for</span> <span class="params">(x in mycars)</span>
+        {
+            temp+=<span class="string">"数组索引或对象属性："</span>+x+<span class="string">" 对应的值："</span>+mycars[x]+<span class="string">"&lt;br/&gt;"</span>;
+        }
+        document.getElementById<span class="params">(<span class="string">"demo"</span>)</span>.innerHTML=<span class="built_in">str</span>+<span class="string">"&lt;br/&gt;"</span>+temp;
+    &lt;/script&gt;
+&lt;/p&gt;
+</code></pre><h2 id="class相关">class相关</h2><h4 id="原生js_class增删">原生js class增删</h4><pre><code><span class="tag">&lt;<span class="title">style</span> <span class="attribute">type</span>=<span class="value">"text/css"</span>&gt;</span><span class="css">
+    <span class="tag">div</span><span class="class">.testClass</span><span class="rules">{
+        <span class="rule"><span class="attribute">background-color</span>:<span class="value">gray</span></span>;
+    }</span>
+</span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="openscad">
+    <span class="function"><span class="keyword">function</span> <span class="title">hasClass</span><span class="params">(obj, cls)</span> {</span>
+        return obj.className.match<span class="params">(new RegExp<span class="params">('<span class="params">(\\s|^)</span>' + cls + '<span class="params">(\\s|$)</span>')</span>)</span>;
+    }
+
+    <span class="function"><span class="keyword">function</span> <span class="title">addClass</span><span class="params">(obj, cls)</span> {</span>
+        <span class="keyword">if</span> <span class="params">(!this.hasClass<span class="params">(obj, cls)</span>)</span> obj.className += <span class="string">" "</span> + cls;
+    }
+
+    <span class="function"><span class="keyword">function</span> <span class="title">removeClass</span><span class="params">(obj, cls)</span> {</span>
+        <span class="keyword">if</span> <span class="params">(hasClass<span class="params">(obj, cls)</span>)</span> {
+            var reg = new RegExp<span class="params">('<span class="params">(\\s|^)</span>' + cls + '<span class="params">(\\s|$)</span>')</span>;
+            obj.className = obj.className.replace<span class="params">(reg, ' ')</span>;
+        }
+    }
+
+    <span class="function"><span class="keyword">function</span> <span class="title">toggleClass</span><span class="params">(obj,cls)</span>{</span>
+        <span class="keyword">if</span><span class="params">(hasClass<span class="params">(obj,cls)</span>)</span>{
+            removeClass<span class="params">(obj, cls)</span>;
+        }<span class="keyword">else</span>{
+            addClass<span class="params">(obj, cls)</span>;
+        }
+    }
+
+    <span class="function"><span class="keyword">function</span> <span class="title">toggleClassTest</span><span class="params">()</span>{</span>
+        var obj = document. getElementById<span class="params">('test')</span>;
+        toggleClass<span class="params">(obj,<span class="string">"testClass"</span>)</span>;
+    }
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span> = "<span class="attribute">test</span>" <span class="attribute">style</span> = "<span class="attribute">width:250px</span>;<span class="attribute">height:100px</span>;"&gt;</span>
+        sssssssssssss
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span> = "<span class="attribute">button</span>" <span class="attribute">value</span> = "<span class="attribute">toggleClassTest</span>" <span class="attribute">onclick</span> = "<span class="attribute">toggleClassTest</span>();" /&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+</code></pre><h2 id="css相关">css相关</h2><h4 id="获取css样式">获取css样式</h4><p>出处：<a href="http://www.csshello.com/jcjs/352.html" target="_blank" rel="external">http://www.csshello.com/jcjs/352.html</a><br>样式呢，如果直接写在行内，也就是内联样式，js能直接获取到。如果写在非行内，改怎么获取呢？<br>顺便科普下，总共有三种分类：内联样式(Inline Style)、内部样式表(Internal Style Sheet)和外部样式表(External Style Sheet)。<br>直接上代码：</p>
+<ul>
+<li>div1为行内样式</li>
+<li><p>div2为非行内样式<br>css部分</p>
+<h1 id="div2{width:200px;_height:200px;_background:red;}">div2{width:200px; height:200px; background:red;}</h1><p>html部分</p>
+<p>  <div id="div1" style="width:200px; height:200px; background:red;"></div><br>  <div id="div2"></div><br>js部分</p>
+<p>  window.onload=function(){</p>
+<pre><code><span class="reserved">var</span> odiv1=<span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);
+<span class="reserved">var</span> odiv2=<span class="built_in">document</span>.getElementById(<span class="string">'div2'</span>);
+<span class="regexp">//</span>由于ie不支持<span class="built_in">console</span>.log(),故测试ie时，请使用alert()
+<span class="built_in">console</span>.log(<span class="string">'行内样式获取'</span>+odiv1.style.width);
+<span class="built_in">console</span>.log(<span class="string">'非行内样式获取'</span>+odiv2.style.width);
+<span class="built_in">console</span>.log(<span class="string">'非行内样式获取通过函数'</span>+getStyle(odiv2,<span class="string">'width'</span>));
+</code></pre><p>  }<br>  function getStyle(obj,name){<br>  if(obj.currentStyle){</p>
+<pre><code><span class="comment">//IE</span>
+<span class="keyword">return</span> obj.currentStyle[name];
+</code></pre><p>  }else{</p>
+<pre><code><span class="comment">//FF、Chrome</span>
+<span class="keyword">return</span> getComputedStyle(obj,<span class="literal">false</span>)[name];
+</code></pre><p>  }<br>  };</p>
+</li>
+</ul>
+<h2 id="其他零散">其他零散</h2><h3 id="一次弹框">一次弹框</h3><pre><code><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">name</span>) </span>{
+    <span class="keyword">var</span> cookiefound = <span class="literal">false</span>
+    <span class="keyword">var</span> start = <span class="number">0</span>
+    <span class="keyword">var</span> end = <span class="number">0</span>
+    <span class="keyword">var</span> cookiestring = <span class="built_in">document</span>.cookie;
+    <span class="keyword">var</span> i = <span class="number">0</span>;
+    <span class="keyword">while</span> (i &lt;= cookiestring.length) {
+        start = i
+        end = start + name.length
+        <span class="keyword">if</span> (cookiestring.substring(start, end) == name) {
+            cookiefound = <span class="literal">true</span>;
+            <span class="keyword">break</span>;
+        }
+        i++;
+    }
+    <span class="keyword">if</span> (cookiefound == <span class="literal">true</span>) {
+        start = end + <span class="number">1</span>;
+        end = cookiestring.indexOf(<span class="string">";"</span>, start);
+        <span class="keyword">if</span> (end &lt; start) {
+            end = cookiestring.length;
+        }
+        <span class="keyword">return</span> cookiestring.substring(start, end);
+    }
+    <span class="keyword">return</span> <span class="string">""</span>;
+}
+
+<span class="function"><span class="keyword">function</span> <span class="title">newcookie</span>(<span class="params">id, value, guoqi</span>) </span>{
+    <span class="keyword">var</span> expires = <span class="keyword">new</span> <span class="built_in">Date</span>()
+    expires.setTime(expires.getTime() + <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">30</span> * <span class="number">1000</span>) <span class="comment">//30为天数，可改为任意数字</span>
+    <span class="keyword">var</span> expiryDate = expires.toGMTString();
+    <span class="built_in">document</span>.cookie = id + <span class="string">"="</span> + value + <span class="string">";expires="</span> + expiryDate
+}
+
+<span class="keyword">if</span> (getCookie(<span class="string">"Alerted"</span>) == <span class="string">""</span>) {
+    alert(<span class="string">"弹出了"</span>)
+    newcookie(<span class="string">"Alerted"</span>, <span class="string">"yes"</span>)
+} <span class="keyword">else</span> {} &lt; <span class="regexp">/script&gt;    </span>
+</code></pre><hr>
+<p>收工！</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/12/03/css-note-assemble/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          css笔记集合
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/12/03/js-note1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS笔记1</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="js-note2" data-title="JS笔记2" data-url="http://yoursite.com/2014/12/03/js-note2/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"nuomixin"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 糯米馨
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+          由<a href="http://www.qiniu.com/">七牛云</a>提供静态存储
+          沪ICP备15018744号-1
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script>
+	var yiliaConfig = {
+		fancybox: false,
+		mathjax: false,
+		animate: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
