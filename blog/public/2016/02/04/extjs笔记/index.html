@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ext.js v6.0笔记 | 糯米馨的自留地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="记性不好的人啊，还是写下来吧。 安装 安装senchacmd 安装ruby 下载ext.js,这里是ExtJS 6.0.0 GPL开源版。吐个槽，文档里总是会提到sdk，然后后面我猜发现sdk指的就是下载下来的压缩包，我那心情啊。 sencha -sdk /path/to/ext6 generate app MyApp /path/to/my-app  示例：sencha -sdk /path/t">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ext.js v6.0笔记">
+<meta property="og:url" content="http://nuomixin.duapp.com/2016/02/04/extjs笔记/index.html">
+<meta property="og:site_name" content="糯米馨的自留地">
+<meta property="og:description" content="记性不好的人啊，还是写下来吧。 安装 安装senchacmd 安装ruby 下载ext.js,这里是ExtJS 6.0.0 GPL开源版。吐个槽，文档里总是会提到sdk，然后后面我猜发现sdk指的就是下载下来的压缩包，我那心情啊。 sencha -sdk /path/to/ext6 generate app MyApp /path/to/my-app  示例：sencha -sdk /path/t">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-08T03:42:49.979Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ext.js v6.0笔记">
+<meta name="twitter:description" content="记性不好的人啊，还是写下来吧。 安装 安装senchacmd 安装ruby 下载ext.js,这里是ExtJS 6.0.0 GPL开源版。吐个槽，文档里总是会提到sdk，然后后面我猜发现sdk指的就是下载下来的压缩包，我那心情啊。 sencha -sdk /path/to/ext6 generate app MyApp /path/to/my-app  示例：sencha -sdk /path/t">
+  
+    <link rel="alternative" href="/atom.xml" title="糯米馨的自留地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7sbkqu.com1.z0.glb.clouddn.com/favicon.png">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4219fe391086c4deee240ad4925736b6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://7sbkqu.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">糯米馨</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">无可救药的声控斯基</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/blog/archives/index.html">所有文章</a></li>
+				        
+							<li><a href="/blog/tags/亲测/index.html">亲测</a></li>
+				        
+							<li><a href="/blog/tags/前端/index.html">前端</a></li>
+				        
+							<li><a href="/blog/tags/tips/index.html">Tips</a></li>
+				        
+							<li><a href="/blog/tags/笔记/index.html">笔记</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/blog/tags/study/" style="font-size: 10px;">study</a> <a href="/blog/tags/tips/" style="font-size: 12px;">tips</a> <a href="/blog/tags/亲测/" style="font-size: 18px;">亲测</a> <a href="/blog/tags/出去浪/" style="font-size: 10px;">出去浪</a> <a href="/blog/tags/前端/" style="font-size: 20px;">前端</a> <a href="/blog/tags/剧集/" style="font-size: 10px;">剧集</a> <a href="/blog/tags/后端/" style="font-size: 12px;">后端</a> <a href="/blog/tags/图片/" style="font-size: 10px;">图片</a> <a href="/blog/tags/声控/" style="font-size: 10px;">声控</a> <a href="/blog/tags/笔记/" style="font-size: 16px;">笔记</a> <a href="/blog/tags/美色/" style="font-size: 10px;">美色</a> <a href="/blog/tags/随手记/" style="font-size: 10px;">随手记</a> <a href="/blog/tags/随拍/" style="font-size: 14px;">随拍</a> <a href="/blog/tags/音乐/" style="font-size: 10px;">音乐</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.sunxichen.com">我男神的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">无可救药的声控斯基</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">糯米馨</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7sbkqu.com1.z0.glb.clouddn.com/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">糯米馨</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">无可救药的声控斯基</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/blog/archives/index.html">所有文章</a></li>
+		        
+					<li><a href="/blog/tags/亲测/index.html">亲测</a></li>
+		        
+					<li><a href="/blog/tags/前端/index.html">前端</a></li>
+		        
+					<li><a href="/blog/tags/tips/index.html">Tips</a></li>
+		        
+					<li><a href="/blog/tags/笔记/index.html">笔记</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-extjs笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/blog/2016/02/04/extjs笔记/" class="article-date">
+  	<time datetime="2016-02-04T01:33:44.000Z" itemprop="datePublished">2016-02-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ext.js v6.0笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>记性不好的人啊，还是写下来吧。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><ul>
+<li>安装<a href="https://www.sencha.com/products/extjs/cmd-download/" target="_blank" rel="noopener">senchacmd</a></li>
+<li>安装<a href="http://www.ruby-lang.org/en/downloads/" target="_blank" rel="noopener">ruby</a></li>
+<li>下载<a href="http://extjs.org.cn/node/764" target="_blank" rel="noopener">ext.js</a>,这里是ExtJS 6.0.0 GPL开源版。吐个槽，文档里总是会提到sdk，然后后面我猜发现sdk指的就是下载下来的压缩包，我那心情啊。</li>
+<li>sencha -sdk /path/to/ext6 generate app MyApp /path/to/my-app<br>  示例：sencha -sdk /path/to/ExtSDK generate app -classic TutorialApp ./TutorialApp</li>
+<li>进入目标目录 sencha app watch，页面显示地址为 <a href="http://localhost:1841" target="_blank" rel="noopener">http://localhost:1841</a></li>
+<li>桌面的内容在 classic文件夹<br>  classic/src/main/main.js入口<br>  classic/sass/src/ 里面修改sass文件改样式</li>
+<li>入口 根目录 app.js 其中规定了最开始进入的页面</li>
+</ul>
+<a id="more"></a>
+<h1 id="笔记内容开始"><a href="#笔记内容开始" class="headerlink" title="笔记内容开始"></a>笔记内容开始</h1><h2 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h2><h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><pre><code>The top-level namespaces and the actual class names should be CamelCased. Everything else should be all lower-cased. For example:MyCompany.form.action.AutoLoad
+path/to/src is the directory of your application’s classespath/to/src is the directory of your application’s classes
+Acceptable method names:encodeUsingMd5()
+Acceptable variable names:var isGoodName
+</code></pre><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><pre><code>Ext.define(className, members, onClassCreated);
+</code></pre><h3 id="获取值"><a href="#获取值" class="headerlink" title="获取值"></a>获取值</h3><p>Ext.define()中的Config中的值可以用getXxx,setXxx来获取，注意<a href="http://docs.sencha.com/extjs/6.0/core_concepts/classes.html" target="_blank" rel="noopener">驼峰命名</a></p>
+<pre><code>config: {
+   title: &apos;Title Here&apos;,
+   bottomBar: {
+       height: 50,
+       resizable: false
+   }
+}
+</code></pre><h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2><h3 id="加上事件"><a href="#加上事件" class="headerlink" title="加上事件"></a><a href="http://docs.sencha.com/extjs/6.0/core_concepts/events.html" target="_blank" rel="noopener">加上事件</a></h3><p>下面例子就加上了click事件</p>
+<pre><code>var container = Ext.create(&apos;Ext.Container&apos;, {
+    renderTo: Ext.getBody(),
+    html: &apos;Click Me!&apos;,
+    listeners: {
+        click: function(){
+            Ext.Msg.alert(&apos;I have been clicked!&apos;)  
+        }
+    }
+});
+container.getEl().on(&apos;click&apos;, function(){ 
+    this.fireEvent(&apos;click&apos;, container); 
+}, container);
+</code></pre><h3 id="widget-not-found"><a href="#widget-not-found" class="headerlink" title="widget not found"></a>widget not found</h3><pre><code>sencha app build
+</code></pre><p>以上是打包的命令，运行后在build文件夹中会有production文件夹，东西都在那里面。<br>进去找到index.html点开后，如果报错，列如 widget/tabpanel.js 404 not found这种，那就找到用到tabpanel的地方，一般是因为你 xtype:tabpanel 这种地方，然后在相应的文件中，require下对应的名称即可，以<a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.tab.Panel" target="_blank" rel="noopener">tabpanel</a>为例,requier写法如下：</p>
+<pre><code>requires: [
+    &apos;Ext.container.Container&apos;,
+    &apos;Ext.tab.Panel&apos;, //看这里！对就这里，这个值怎么查到的呢，很简单，就是xtype:tabpanel对应的那个名字啦(查官方文档)
+    &apos;Ext.form.field.File&apos;
+],
+</code></pre><h1 id="通用方法"><a href="#通用方法" class="headerlink" title="通用方法"></a>通用方法</h1><h2 id="查找元素ext-componentquery"><a href="#查找元素ext-componentquery" class="headerlink" title="查找元素ext.componentquery"></a>查找元素<a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.ComponentQuery" target="_blank" rel="noopener">ext.componentquery</a></h2><pre><code>我这智商，找了好久 orz
+
+var myPanel = Ext.ComponentQuery.query(&apos;#myPanel&apos;); 
+//实际使用过程中，需要写成这样才能真正拿到这个组件
+myPanel[0]
+</code></pre><h1 id="具体项目"><a href="#具体项目" class="headerlink" title="具体项目"></a>具体项目</h1><h2 id="grid相关"><a href="#grid相关" class="headerlink" title="grid相关"></a><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.grid.Panel" target="_blank" rel="noopener">grid</a>相关</h2><h3 id="表格不要隔行变色，属性竟然藏在这里viewConfig"><a href="#表格不要隔行变色，属性竟然藏在这里viewConfig" class="headerlink" title="表格不要隔行变色，属性竟然藏在这里viewConfig"></a>表格不要隔行变色，<a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.view.Table" target="_blank" rel="noopener">属性竟然藏在这里viewConfig</a></h3><pre><code>viewConfig: {
+    stripeRows: false
+}
+</code></pre><h3 id="表格多选行"><a href="#表格多选行" class="headerlink" title="表格多选行"></a>表格多选行</h3><pre><code>//配置
+selModel: {
+    selType: &apos;cellmodel&apos;,
+    mode   : &apos;MULTI&apos; //多选
+}
+//方法
+getSelection()
+</code></pre><h3 id="表格中的内容无法选中解决方法"><a href="#表格中的内容无法选中解决方法" class="headerlink" title="表格中的内容无法选中解决方法"></a>表格中的内容无法选中解决方法</h3><pre><code>这个大腿必须抱啊！[看这里](http://blog.csdn.net/yeshigudu/article/details/48522239)！！救人于水火啊！！！
+
+viewConfig: {
+    enableTextSelection: true
+}
+</code></pre><h3 id="高亮行"><a href="#高亮行" class="headerlink" title="高亮行,"></a><a href="https://www.sencha.com/forum/showthread.php?140274-grid-row-selection-in-ExtJS4" target="_blank" rel="noopener">高亮行</a>,</h3><pre><code>[取消高亮](http://forums.ext.net/showthread.php?868-CLOSED-Clearing-selection-from-a-gridpanel)
+</code></pre><p>反正就是一把辛酸的泪，那些没设置延时的，你们怎么成功实现高亮的！！！<br>上结果：</p>
+<pre><code>var urlListTab = Ext.ComponentQuery.query(&apos;#urlListTab&apos;)[0];
+setTimeout(function() {urlListTab.getSelectionModel().select(index, false, false)}, 800); //
+index为行的index值。第一个false时，进入这个grid时，有其他的高亮行时，指定的这行就不亮了，这个就看看，实际用的时候再测测
+//清除高亮
+GridPanel1.getSelectionModel().clearSelections //当前高亮全部去除
+</code></pre><h2 id="tab"><a href="#tab" class="headerlink" title="tab"></a><a href="http://docs.sencha.com/extjs/6.0.0-classic/Ext.tab.Panel.html" target="_blank" rel="noopener">tab</a></h2><p>我只是简单的想隐藏个tab，结果智商是硬伤，官方文档里就有好不好 orz</p>
+<pre><code>var tabs = Ext.create(&apos;Ext.tab.Panel&apos;, {
+    width: 400,
+    height: 400,
+    renderTo: document.body,
+    items: [{
+        title: &apos;Home&apos;,
+        html: &apos;Home&apos;,
+        itemId: &apos;home&apos; // 看这里!!! 是itemId,不是id!!!
+    }, {
+        title: &apos;Users&apos;,
+        html: &apos;Users&apos;,
+        itemId: &apos;users&apos;,
+        hidden: true
+    }, {
+        title: &apos;Tickets&apos;,
+        html: &apos;Tickets&apos;,
+        itemId: &apos;tickets&apos;
+    }]
+});
+
+Ext.defer(function(){
+    tabs.child(&apos;#home&apos;).tab.hide();
+    var users = tabs.child(&apos;#users&apos;);
+    users.tab.show();
+    tabs.setActiveTab(users);
+}, 1000);
+</code></pre><h2 id="store和storeManager"><a href="#store和storeManager" class="headerlink" title="store和storeManager"></a><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Store" target="_blank" rel="noopener">store</a>和<a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.StoreManager" target="_blank" rel="noopener">storeManager</a></h2><p>先吐槽，store的水好深（其实我好想打三个点，但我要忍住）</p>
+<h3 id="拿到store"><a href="#拿到store" class="headerlink" title="拿到store"></a>拿到store</h3><pre><code>Ext.create(&apos;Ext.data.Store&apos;, {
+    model: &apos;SomeModel&apos;,
+    storeId: &apos;myStore&apos;
+});
+var store = Ext.data.StoreManager.lookup(&apos;myStore&apos;);//用storeId拿到
+</code></pre><h3 id="用store"><a href="#用store" class="headerlink" title="用store"></a>用store</h3><pre><code>Ext.create(&apos;Ext.data.Store&apos;, {
+    model: &apos;SomeModel&apos;,
+    storeId: &apos;myStore&apos;
+});
+Ext.create(&apos;Ext.view.View&apos;, {
+    store: &apos;myStore&apos;, //用storeId就到手啦，真好
+    // other configuration here
+});
+</code></pre><h3 id="store具体方法"><a href="#store具体方法" class="headerlink" title="store具体方法"></a><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Store" target="_blank" rel="noopener">store具体方法</a></h3><pre><code>//特别提醒，先要拿到store，说多了都是泪
+//增加内容
+myStore.add({some: &apos;data&apos;}, {some: &apos;other data&apos;});
+myStore.insert(index, records); //eg: myStore.insert(0, { &quot;name&quot;: &quot;hello&quot;, &quot;age&quot;: &quot;60&quot;})  
+myStore.find(&apos;name&apos;, &apos;hello&apos;); //返回的是序列号，即index
+myStore.removeAt( index, [count] ) //嘿嘿嘿，拿到序号就可以删除啦
+</code></pre><h2 id="data"><a href="#data" class="headerlink" title="data"></a>data</h2><h3 id="field"><a href="#field" class="headerlink" title="field"></a><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.field.Field" target="_blank" rel="noopener">field</a></h3><p>在这里可以重组field的数据</p>
+<pre><code>{
+    name: &apos;firstName&apos;,
+    convert: function (value, record) {
+        return record.get(&apos;name&apos;).split(&apos; &apos;)[0];
+    },
+    depends: [ &apos;name&apos; ]
+}
+</code></pre><h3 id="data-model"><a href="#data-model" class="headerlink" title="data.model"></a><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.Model" target="_blank" rel="noopener">data.model</a></h3><p>绑定数据相关，好好看看</p>
+<h2 id="ajax相关"><a href="#ajax相关" class="headerlink" title="ajax相关"></a>ajax相关</h2><p>我一定要写下来，最后我都把我自己感动了，太不容易了，拿个值。<br><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.Ajax" target="_blank" rel="noopener">Ext.ajax</a></p>
+<pre><code>Ext.define(&apos;ttt&apos;, function() {
+     return{
+        getData:function(){
+            var userData;
+            Ext.Ajax.request({
+                async: false,//就是这个地方！要加！不然return出来的是undefined
+                url: &apos;resources/userinfo.json&apos;,
+                success: function(response, opts) {
+                    var obj = Ext.decode(response.responseText);
+                    console.log(&apos;成功&apos;)
+                    userData = obj;
+                },
+                failure: function(response, opts) {
+                    console.log(&apos;server-side failure with status code &apos; + response.status);
+                    userData = &apos;failure&apos;
+                }
+            });
+            return userData;
+        }
+     }
+})
+var test = new ttt();
+var userData = test.getData()
+//我会说这个userData拿到了要来干嘛吗？
+
+//引入
+viewModel: {
+    data: userData
+}
+//使用
+{
+    xtype:&apos;button&apos;,
+    bind: {
+        text: &apos;{username}&apos;//json里面有的字段就可以用啦
+    },            
+}
+
+//正常实用款
+Ext.Ajax.request({
+    url: &apos;resources/userinfo.json&apos;,
+    success: function(response, opts) {
+        var data = Ext.decode(response.responseText);
+        //数据处理动起来
+    },
+    failure: function(response, opts) {
+        console.log(&apos;server-side failure with status code &apos; + response.status)
+    }
+
+});
+
+//亮点来啦！！ [jsonp](http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.data.proxy.JsonP)
+proxy: {
+    type: &apos;jsonp&apos;,
+    url : &apos;http://domainB.com/user&apos;,
+    callbackKey: &apos;callback&apos;, //亮点在这里，callback=Ext.data.JsonP.callback1 “callback”此字段名一定要匹配！！！
+    reader: {
+        rootProperty: &apos;rows&apos;,
+        totalProperty: &apos;resutls&apos;
+    }
+},
+</code></pre><h2 id="define"><a href="#define" class="headerlink" title="define"></a>define</h2><p>我觉得挺实用的，拉出来</p>
+<pre><code>Ext.define(&apos;My.awesome.Class&apos;, {
+    someProperty: &apos;something&apos;,
+    someMethod: function(s) {
+        alert(s + this.someProperty);
+    }
+    ...
+});
+var obj = new My.awesome.Class();
+obj.someMethod(&apos;Say &apos;); // alerts &apos;Say something&apos;
+</code></pre><h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a><a href="http://docs.sencha.com/extjs/6.0/6.0.0-classic/#!/api/Ext.util.Base64" target="_blank" rel="noopener">base64</a></h2><pre><code>自带！！！
+
+//解码
+res = Ext.util.Base64.decode(res); 
+</code></pre><h2 id="form相关"><a href="#form相关" class="headerlink" title="form相关"></a>form相关</h2><p>表单提交后一直进入failure的<a href="http://atechiediary.blogspot.jp/2013/06/ext-js-form-submit-return-always-failure.html" target="_blank" rel="noopener">解决方法</a>,就是需要在返回的json中加入一个字段{“success”: true},亲测可用</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2016/02/26/设计相关/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          设计相关
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2015/12/04/meise1512/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">美色1512</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" style="margin:30px;padding:10px;background:#fff;">
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "iQD3W24cfvu1WB82GuUFQoVc-gzGzoHsz",
+            app_key: "nOw3zLema3nK8AjxW5OlajW1",
+            placeholder: "",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2018 糯米馨
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+          由<a href="http://www.qiniu.com/">七牛云</a>提供静态存储
+          沪ICP备15018744号-1
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script>
+	var yiliaConfig = {
+		fancybox: false,
+		mathjax: false,
+		animate: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/blog/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
