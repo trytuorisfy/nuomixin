@@ -55,7 +55,7 @@ windows环境下运行python下载小说保存成txt
 	        #函数递归
 	        getStory(next_url)
 	    else:
-	        print '没有下一页啦'
+	        print u"没有下一页啦".encode("GBK")
 	        txtName = soup.select('h1')[0].get_text() + '.txt'
 	        if os.path.exists(txtName):
 	            os.remove(txtName)
