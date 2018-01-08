@@ -6,7 +6,7 @@
    var verify = '<%= theme.valine.verify %>' == true ? true : false;
     window.onload = function() {
         new Valine({
-            el: '.comment',
+            el: '#vcomment',
             notify: notify,
             verify: verify,
             app_id: "<%= theme.valine.appid %>",

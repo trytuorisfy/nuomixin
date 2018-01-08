@@ -80,8 +80,8 @@
 </section>
 <% } %>
 
-<% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
-  <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+<% if (!index && post.comments && theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+  <section id="comments" style="margin:30px;padding:10px;background:#fff;">
     <%- partial('post/valine', {
       key: post.slug,
       title: post.title,
