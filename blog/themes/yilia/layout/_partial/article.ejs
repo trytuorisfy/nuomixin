@@ -79,3 +79,13 @@
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </section>
 <% } %>
+
+<% if (theme.valine && theme.valine.appid && theme.valine.appkey){ %>
+  <section id="comments" style="margin:30px;padding:10px;background:#fff;">
+    <%- partial('post/valine', {
+      key: post.slug,
+      title: post.title,
+      url: config.url+url_for(post.path)
+      }) %>
+  </section>
+<% } %>
