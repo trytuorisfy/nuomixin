@@ -26,11 +26,14 @@ tags: 亲测
 		$npm install hexo-deployer-git --save
 
 5.配置 _config.yml文件,appid其实就是clone下来的文件夹名,如appidv41db5n111
+
 	deploy:
 	  type: git
 	  repo: https://git.duapp.com/[yourappid]
 	  branch: master
 
-6.$ hexo generate --deploy
+6.跑一把
+
+	$ hexo generate --deploy
 
 注意：其实是只同步了public文件夹里面的内容。怪不得我还奇怪呢，怎么直接访问就对了呢，也不用改路径啊。
