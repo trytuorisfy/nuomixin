@@ -207,6 +207,80 @@ var _hmt = _hmt || [];
 </nav>
       <div class="body-wrap">
   
+    <article id="post-angular-node-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/03/20/angular-node-mongodb/" class="article-date">
+  	<time datetime="2015-03-20T02:38:25.000Z" itemprop="datePublished">2015-03-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/20/angular-node-mongodb/">angular.js + node.js +mongodb教程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>看这里！！<a href="http://weblogs.asp.net/dwahlin/dynamically-loading-controllers-and-views-with-angularjs-and-requirejs" target="_blank" rel="noopener">http://weblogs.asp.net/dwahlin/dynamically-loading-controllers-and-views-with-angularjs-and-requirejs</a></p>
+<p>对应的github看这里<a href="https://github.com/trytuorisfy/CustomerManager" target="_blank" rel="noopener">https://github.com/trytuorisfy/CustomerManager</a></p>
+<p>重点看这里！<br>导入数据到mongodb的步骤</p>
+<blockquote>
+<p>Load MongoDB Sample Data Option 1:<br>Load data into MongoDB by performing the following steps:<br>    Execute ‘mongod’ to start the MongoDB daemon<br>    Navigate to the CustomerManager/server directory (the one that has initMongoData.js in it)<br>    Execute ‘mongo’ to start the MongoDB shell<br>    Enter the following in the mongo shell to load the data seed file:<br>        use customermanager<br>        load(“initMongoData.js”)</p>
+</blockquote>
+<p>其实做法应该是 </p>
+<ul>
+<li>先到mongodb的文件夹中的bin文件夹</li>
+<li>新建个文件“链接customermanager.cmd”，双击，内容如下 连接到要放数据的地方<pre><code>mongod --dbpath &quot;e:\wang\Angularjs\CustomerManager-master\CustomerManager\server&quot;
+</code></pre></li>
+<li>到项目的server文件夹中，有个“initMongoDB.bat”，内容如下<pre><code>@ECHO off
+e:\wang\mongodb\bin\mongo.exe %CD%\initMongoData.js
+ECHO -
+ECHO Your data is loaded
+pause
+</code></pre></li>
+<li>见证奇迹的时刻到了，打开MongoVUE.exe（一个看mongodb数据的软件）,连接上localhost之后，里面有个数据库就叫custormanager了，页面也有数据显示咯~~~</li>
+</ul>
+<p>对了，这个还支持异步加载controller哦~</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-php生成验证码" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -714,64 +788,6 @@ npm install -g fis-parser-less
       
         <p class="article-more-link">
           <a  href="/2014/12/05/fis-note/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-css-note-assemble" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/12/03/css-note-assemble/" class="article-date">
-  	<time datetime="2014-12-03T09:49:02.000Z" itemprop="datePublished">2014-12-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/03/css-note-assemble/">css笔记集合</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>终于把电脑里扔了好久的js撸完了，把css也撸一下。<br>还是那句话，这些是到处收集来的笔记，非原创。<br>更新的会写上来源，以前库存的就抱歉了，因为不知道从哪收集来的了。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/12/03/css-note-assemble/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

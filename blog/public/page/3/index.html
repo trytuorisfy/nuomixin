@@ -207,6 +207,64 @@ var _hmt = _hmt || [];
 </nav>
       <div class="body-wrap">
   
+    <article id="post-fis3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/10/16/fis3/" class="article-date">
+  	<time datetime="2015-10-16T02:05:26.000Z" itemprop="datePublished">2015-10-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/16/fis3/">fis3</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>边看边记录吧，岁数大了，记性不行了<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/10/16/fis3/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-websoket" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -782,84 +840,6 @@ hexo generate
 
       
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-typecho" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/06/18/typecho/" class="article-date">
-  	<time datetime="2015-06-18T07:08:02.000Z" itemprop="datePublished">2015-06-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/18/typecho/">typecho相关（地址重写，七牛）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>亲测通过，过程如下：</p>
-<h2 id="地址重写"><a href="#地址重写" class="headerlink" title="地址重写"></a>地址重写</h2><ol>
-<li>进入vpsmate</li>
-<li>进入网站管理</li>
-<li>在对应的域名的设置里面打开rewrite，内容则填写如下<br> rewrite (.*) /index.php;</li>
-<li>重启nginx后，在typecho后台的永久链接中就可以启用咯</li>
-</ol>
-<h2 id="七牛云存储"><a href="#七牛云存储" class="headerlink" title="七牛云存储"></a>七牛云存储</h2><p>引用下教程，看这里：<br><a href="http://www.abelyao.com/typecho-qiniufile/" target="_blank" rel="noopener">ABEL的博客</a></p>
-<h3 id="图片上传时保持原名"><a href="#图片上传时保持原名" class="headerlink" title="图片上传时保持原名"></a>图片上传时保持原名</h3><p>因为插件默认会重新修改图片的名称，所以我进去小改了下，同时用了七牛的图片处理api，让图片宽度保持在500px。<br>修改的地方就2处：</p>
-<pre><code>//第一处
-//修改前
-$savename = $savepath . sprintf(&apos;%u&apos;, crc32(uniqid())) . &apos;.&apos; . $ext;
-//修改后
-$savename = $savepath . $file[&apos;name&apos;];
-
-//第二处
-//修改前
-&apos;path&apos;  =&gt;  $savename,
-//修改后
-&apos;path&apos;  =&gt;  $savename.&apos;?imageView2/2/w/500&apos;,
-</code></pre><p>最后，再附上七牛的<a href="http://developer.qiniu.com/docs/v6/api/reference/fop/image/imageview2.html" target="_blank" rel="noopener">图片处理api</a>，可以自己看着改哈</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/亲测/">亲测</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/06/18/typecho/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
