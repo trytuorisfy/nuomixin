@@ -8,7 +8,7 @@ tags: 前端
 布局就是顶部一个固定的导航条，底部的div是固定的，有个初始高度。
 备注：其中的drag函数的代码是之前网上找的，但不记得出处了，万一作者本人看到的话，请把链接砸给我。
 
-<a href="http://7sbkqu.com1.z0.glb.clouddn.com/drag.html" target="_blank">效果查看</a>
+<a href="http://images.nuomixin.com/drag.html" target="_blank">效果查看</a>
 
 <!--more-->
 

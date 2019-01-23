@@ -78,8 +78,8 @@ theme: yilia
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://git.duapp.com/appidob6tjdbg35
-  branch: master
+  repo: git@github.com:trytuorisfy/nuomixin.git
+  branch: gh-pages
 
 sitemap:
   path: sitemap.xml

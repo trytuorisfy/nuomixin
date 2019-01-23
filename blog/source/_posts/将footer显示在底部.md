@@ -6,7 +6,7 @@ tags: 亲测
 
 需求说来也简单，就是让footer显示在底部，嗯，听着是挺简单的，结果那心酸也是不说了。直接上结果。
 布局如下；
-![现有布局](http://7sbkqu.com1.z0.glb.clouddn.com/footerbuju.jpg?imageView2/2/w/400/q/75|imageslim)
+![现有布局](http://images.nuomixin.com/footerbuju.jpg?imageView2/2/w/400/q/75|imageslim)
 
 解决方案：
 设置内容区的最小高度。

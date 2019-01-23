@@ -41,7 +41,7 @@ tags: 亲测
 
 来，放一个我现在的铃声，伦桑 入阵曲
 
-<mp3>http://7sbkqu.com1.z0.glb.clouddn.com/music-ruzhenqu-lun.mp3</mp3>
+<mp3>http://images.nuomixin.com/music-ruzhenqu-lun.mp3</mp3>
 
 ***
 ## 部署到BAE

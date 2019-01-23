@@ -38,10 +38,10 @@ open_in_new: false
 # Miscellaneous
 #google_analytics: ''
 baidu_tongji: true
-favicon: "http://7sbkqu.com1.z0.glb.clouddn.com/favicon.png"
+favicon: "http://images.nuomixin.com/favicon.png"
 
 #你的头像url
-avatar: "http://7sbkqu.com1.z0.glb.clouddn.com/avatar.jpg"
+avatar: "http://images.nuomixin.com/avatar.jpg"
 #是否开启分享
 share: false
 #是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
