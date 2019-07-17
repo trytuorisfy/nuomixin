@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>typecho相关（地址重写，七牛） | 糯米馨的自留地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="亲测通过，过程如下： 地址重写 进入vpsmate 进入网站管理 在对应的域名的设置里面打开rewrite，内容则填写如下 rewrite (.*) /index.php; 重启nginx后，在typecho后台的永久链接中就可以启用咯  七牛云存储引用下教程，看这里：ABEL的博客 图片上传时保持原名因为插件默认会重新修改图片的名称，所以我进去小改了下，同时用了七牛的图片处理api，让图片宽度保">
+<meta name="keywords" content="亲测">
+<meta property="og:type" content="article">
+<meta property="og:title" content="typecho相关（地址重写，七牛）">
+<meta property="og:url" content="http://yoursite.com/2015/06/18/typecho/index.html">
+<meta property="og:site_name" content="糯米馨的自留地">
+<meta property="og:description" content="亲测通过，过程如下： 地址重写 进入vpsmate 进入网站管理 在对应的域名的设置里面打开rewrite，内容则填写如下 rewrite (.*) /index.php; 重启nginx后，在typecho后台的永久链接中就可以启用咯  七牛云存储引用下教程，看这里：ABEL的博客 图片上传时保持原名因为插件默认会重新修改图片的名称，所以我进去小改了下，同时用了七牛的图片处理api，让图片宽度保">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-17T02:20:39.465Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="typecho相关（地址重写，七牛）">
+<meta name="twitter:description" content="亲测通过，过程如下： 地址重写 进入vpsmate 进入网站管理 在对应的域名的设置里面打开rewrite，内容则填写如下 rewrite (.*) /index.php; 重启nginx后，在typecho后台的永久链接中就可以启用咯  七牛云存储引用下教程，看这里：ABEL的博客 图片上传时保持原名因为插件默认会重新修改图片的名称，所以我进去小改了下，同时用了七牛的图片处理api，让图片宽度保">
+  
+    <link rel="alternative" href="/atom.xml" title="糯米馨的自留地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://images.nuomixin.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4219fe391086c4deee240ad4925736b6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://images.nuomixin.com/avatar.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">糯米馨</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">无可救药的声控斯基</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/archives/index.html">所有文章</a></li>
+				        
+							<li><a href="/tags/亲测/index.html">亲测</a></li>
+				        
+							<li><a href="/tags/前端/index.html">前端</a></li>
+				        
+							<li><a href="/tags/tips/index.html">Tips</a></li>
+				        
+							<li><a href="/tags/笔记/index.html">笔记</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/study/" style="font-size: 10px;">study</a> <a href="/tags/tips/" style="font-size: 12px;">tips</a> <a href="/tags/亲测/" style="font-size: 18px;">亲测</a> <a href="/tags/出去浪/" style="font-size: 10px;">出去浪</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/剧集/" style="font-size: 10px;">剧集</a> <a href="/tags/后端/" style="font-size: 12px;">后端</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/声控/" style="font-size: 10px;">声控</a> <a href="/tags/笔记/" style="font-size: 16px;">笔记</a> <a href="/tags/美色/" style="font-size: 10px;">美色</a> <a href="/tags/随手记/" style="font-size: 10px;">随手记</a> <a href="/tags/随拍/" style="font-size: 14px;">随拍</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.sunxichen.com">我男神的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">无可救药的声控斯基</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">糯米馨</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://images.nuomixin.com/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">糯米馨</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">无可救药的声控斯基</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/archives/index.html">所有文章</a></li>
+		        
+					<li><a href="/tags/亲测/index.html">亲测</a></li>
+		        
+					<li><a href="/tags/前端/index.html">前端</a></li>
+		        
+					<li><a href="/tags/tips/index.html">Tips</a></li>
+		        
+					<li><a href="/tags/笔记/index.html">笔记</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-typecho" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/18/typecho/" class="article-date">
+  	<time datetime="2015-06-18T07:08:02.000Z" itemprop="datePublished">2015-06-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      typecho相关（地址重写，七牛）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/亲测/">亲测</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>亲测通过，过程如下：</p>
+<h2 id="地址重写"><a href="#地址重写" class="headerlink" title="地址重写"></a>地址重写</h2><ol>
+<li>进入vpsmate</li>
+<li>进入网站管理</li>
+<li>在对应的域名的设置里面打开rewrite，内容则填写如下<br> rewrite (.*) /index.php;</li>
+<li>重启nginx后，在typecho后台的永久链接中就可以启用咯</li>
+</ol>
+<h2 id="七牛云存储"><a href="#七牛云存储" class="headerlink" title="七牛云存储"></a>七牛云存储</h2><p>引用下教程，看这里：<br><a href="http://www.abelyao.com/typecho-qiniufile/" target="_blank" rel="noopener">ABEL的博客</a></p>
+<h3 id="图片上传时保持原名"><a href="#图片上传时保持原名" class="headerlink" title="图片上传时保持原名"></a>图片上传时保持原名</h3><p>因为插件默认会重新修改图片的名称，所以我进去小改了下，同时用了七牛的图片处理api，让图片宽度保持在500px。<br>修改的地方就2处：</p>
+<pre><code>//第一处
+//修改前
+$savename = $savepath . sprintf(&apos;%u&apos;, crc32(uniqid())) . &apos;.&apos; . $ext;
+//修改后
+$savename = $savepath . $file[&apos;name&apos;];
+
+//第二处
+//修改前
+&apos;path&apos;  =&gt;  $savename,
+//修改后
+&apos;path&apos;  =&gt;  $savename.&apos;?imageView2/2/w/500&apos;,
+</code></pre><p>最后，再附上七牛的<a href="http://developer.qiniu.com/docs/v6/api/reference/fop/image/imageview2.html" target="_blank" rel="noopener">图片处理api</a>，可以自己看着改哈</p>
+<a id="more"></a>
+<h2 id="插入mp3"><a href="#插入mp3" class="headerlink" title="插入mp3"></a>插入mp3</h2><p>用的插件是 Dewplayer，我是从<a href="https://github.com/chekun/AppStore" target="_blank" rel="noopener">appstore</a>这个项目中下载的<br>使用简单，直接如下：</p>
+<pre><code>&lt;mp3&gt;歌曲地址&lt;/mp3&gt;
+</code></pre><p>来，放一个我现在的铃声，伦桑 入阵曲</p>
+<mp3><a href="http://images.nuomixin.com/music-ruzhenqu-lun.mp3" target="_blank" rel="noopener">http://images.nuomixin.com/music-ruzhenqu-lun.mp3</a></mp3>
+
+<hr>
+<h2 id="部署到BAE"><a href="#部署到BAE" class="headerlink" title="部署到BAE"></a>部署到BAE</h2><p>好吧，我又在BAE上捣腾了一遍，重点是：<br><code>工具要用vpn！！！</code>，如果用git的时候，有个配置文件config.inc.php是不认的！<br>其他的照官方教程来就行了，<a href="http://docs.typecho.org/bae-install" target="_blank" rel="noopener">点这里</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/06/24/windows-django/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          windows安装django
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/06/14/yy-voice/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">那些收藏在yy的声音</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" style="margin:30px;padding:10px;background:#fff;">
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "iQD3W24cfvu1WB82GuUFQoVc-gzGzoHsz",
+            app_key: "nOw3zLema3nK8AjxW5OlajW1",
+            placeholder: "",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 糯米馨
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+          由<a href="http://www.qiniu.com/">七牛云</a>提供静态存储
+          沪ICP备15018744号-1
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script>
+	var yiliaConfig = {
+		fancybox: false,
+		mathjax: false,
+		animate: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

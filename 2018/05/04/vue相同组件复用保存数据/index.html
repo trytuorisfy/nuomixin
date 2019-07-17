@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vue相同组件复用保存数据 | 糯米馨的自留地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简单粗暴贴代码，重点是用了Object.assign()">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue相同组件复用保存数据">
+<meta property="og:url" content="http://yoursite.com/2018/05/04/vue相同组件复用保存数据/index.html">
+<meta property="og:site_name" content="糯米馨的自留地">
+<meta property="og:description" content="简单粗暴贴代码，重点是用了Object.assign()">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-17T02:20:39.466Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue相同组件复用保存数据">
+<meta name="twitter:description" content="简单粗暴贴代码，重点是用了Object.assign()">
+  
+    <link rel="alternative" href="/atom.xml" title="糯米馨的自留地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://images.nuomixin.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4219fe391086c4deee240ad4925736b6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://images.nuomixin.com/avatar.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">糯米馨</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">无可救药的声控斯基</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/archives/index.html">所有文章</a></li>
+				        
+							<li><a href="/tags/亲测/index.html">亲测</a></li>
+				        
+							<li><a href="/tags/前端/index.html">前端</a></li>
+				        
+							<li><a href="/tags/tips/index.html">Tips</a></li>
+				        
+							<li><a href="/tags/笔记/index.html">笔记</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/study/" style="font-size: 10px;">study</a> <a href="/tags/tips/" style="font-size: 12px;">tips</a> <a href="/tags/亲测/" style="font-size: 18px;">亲测</a> <a href="/tags/出去浪/" style="font-size: 10px;">出去浪</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/剧集/" style="font-size: 10px;">剧集</a> <a href="/tags/后端/" style="font-size: 12px;">后端</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/声控/" style="font-size: 10px;">声控</a> <a href="/tags/笔记/" style="font-size: 16px;">笔记</a> <a href="/tags/美色/" style="font-size: 10px;">美色</a> <a href="/tags/随手记/" style="font-size: 10px;">随手记</a> <a href="/tags/随拍/" style="font-size: 14px;">随拍</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.sunxichen.com">我男神的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">无可救药的声控斯基</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">糯米馨</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://images.nuomixin.com/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">糯米馨</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">无可救药的声控斯基</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/archives/index.html">所有文章</a></li>
+		        
+					<li><a href="/tags/亲测/index.html">亲测</a></li>
+		        
+					<li><a href="/tags/前端/index.html">前端</a></li>
+		        
+					<li><a href="/tags/tips/index.html">Tips</a></li>
+		        
+					<li><a href="/tags/笔记/index.html">笔记</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-vue相同组件复用保存数据" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/05/04/vue相同组件复用保存数据/" class="article-date">
+  	<time datetime="2018-05-04T06:39:26.000Z" itemprop="datePublished">2018-05-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue相同组件复用保存数据
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>简单粗暴贴代码，重点是用了Object.assign()</p>
+<a id="more"></a>
+<p>整体思路：<br>    listWrap通过不同的路径确认显示列表或详情。<br>    详情中的input框用于测试数据是否正确留存，可以将id页面上显示的id复制进去用于测试。<br>    详情activated时，判断是否有过值，有过则恢复，没有过则重置为初始值。beforeRouteUpdate及beforeRouteLeave时，将当期的整个data踢到父组件的对象中，已唯一id值作为判断</p>
+<p>用vue-cli的脚手架搭了个基本页面<br>贴起来</p>
+<pre><code>// router/index.js
+import Vue from &apos;vue&apos;
+import Router from &apos;vue-router&apos;
+import HelloWorld from &apos;@/components/HelloWorld&apos;
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: &apos;/&apos;,
+      name: &apos;HelloWorld&apos;,
+      component: HelloWorld
+    },
+    {
+      path: &apos;/list&apos;,
+      component: r =&gt; require.ensure([], () =&gt; r(require(&apos;../page/List/ListWrap&apos;)), &apos;ListWarp&apos;),
+      children: [
+          {
+              path: &apos;all&apos;,
+              component: r =&gt; require.ensure([], () =&gt; r(require(&apos;../page/List/List&apos;)), &apos;List&apos;),
+          },
+            {
+          path: &apos;/list/:id&apos;,
+          component: r =&gt; require.ensure([], () =&gt; r(require(&apos;../page/List/Detail&apos;)), &apos;Detail&apos;)
+        },
+      ]
+    }
+
+  ]
+})
+
+//listWrap.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;我是listwrap&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;router-link :to=&quot;&apos;/list/all&apos;&quot;&gt;all&lt;/router-link&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div&gt;
+      &lt;keep-alive&gt;
+        &lt;router-view&gt;&lt;/router-view&gt;
+      &lt;/keep-alive&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &apos;List&apos;,
+  components: {
+
+  },
+  data () {
+    return {
+      tabData:[],
+      keptData:{}
+    }
+  },
+  mounted(){
+
+  },
+  computed: {
+
+  },
+  methods:{
+  },
+  props:[]
+}
+&lt;/script&gt;
+
+&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+
+
+// list.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;我是list&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li v-for=&quot;item in listData&quot;&gt;
+        &lt;p&gt;姓名:
+          &lt;!-- &lt;router-link :to=&quot;&apos;/list/&apos; + item.id&quot;&gt;{{ item.name }}&lt;/router-link&gt; --&gt;
+          &lt;span @click=&quot;changeTab(item.id)&quot;&gt;{{ item.name }}&lt;/span&gt;
+        &lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &apos;List&apos;,
+  components: {
+
+  },
+  data () {
+    return {
+      listData: []
+    }
+  },
+  mounted(){
+    this.getListData()
+  },
+  computed: {
+    // demo:function(){
+    //   return &apos;&apos;
+    // }
+  },
+  methods:{
+    getListData(){
+      let data = [
+        {
+          &quot;id&quot;: &quot;5aebce8e739c96e54f825a65&quot;,
+          &quot;guid&quot;: &quot;0e9f4a92-844a-429c-bbd2-e89755ef68d2&quot;,
+          &quot;name&quot;: &quot;Lorene&quot;
+        },
+        {
+          &quot;id&quot;: &quot;5aebce8ef5d7092359d8e01e&quot;,
+          &quot;guid&quot;: &quot;8aaf7d2e-e959-4e02-bfb6-da7154f72dea&quot;,
+          &quot;name&quot;: &quot;Elma&quot;
+        },
+        {
+          &quot;id&quot;: &quot;5aebce8e3a80cefa24e3de06&quot;,
+          &quot;guid&quot;: &quot;7e4f0acc-2635-4bc9-aeae-430c5d217310&quot;,
+          &quot;name&quot;: &quot;Hamilton&quot;
+        },
+        {
+          &quot;id&quot;: &quot;5aebce8ea5670481982ff9be&quot;,
+          &quot;guid&quot;: &quot;8b7f5641-0e1d-4c0f-898d-64dd14c10ef4&quot;,
+          &quot;name&quot;: &quot;Alisha&quot;
+        },
+        {
+          &quot;id&quot;: &quot;5aebce8e9487a646c5435662&quot;,
+          &quot;guid&quot;: &quot;c3fdfd5f-3d99-4bc4-8c2a-4216411bbb8f&quot;,
+          &quot;name&quot;: &quot;Mcfadden&quot;
+        },
+        {
+          &quot;id&quot;: &quot;5aebce8e6e2cd977e78b15a3&quot;,
+          &quot;guid&quot;: &quot;1bd8fc09-070e-4f69-be32-e4dd71c06ebc&quot;,
+          &quot;name&quot;: &quot;Burke&quot;
+        }
+      ]
+      this.listData = data;
+
+    },
+    changeTab(id){
+      this.$router.push({ path: `/list/${id}` })
+    }
+  },
+  props:[]
+}
+&lt;/script&gt;
+
+&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+
+//Detail.vue
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;p&gt;大家好，我是{{$route.params.id}}&lt;/p&gt;
+    &lt;div&gt;
+      &lt;p&gt;内容区&lt;/p&gt;
+      &lt;div&gt;
+        {{ msg }}
+      &lt;/div&gt;
+      &lt;div&gt;
+        &lt;input type=&quot;text&quot; v-model=&quot;iptVal&quot;&gt;
+      &lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li v-for=&quot;item in arry&quot;&gt;{{ item }}&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &apos;Detail&apos;,
+  components: {
+
+  }, 
+  data () {
+    return {
+      msg: &apos;yyy&apos;,
+      iptVal:&apos;&apos;,
+      arry:[]
+    }
+  },
+  mounted(){
+    this.getData()
+    console.log(this.$data)
+  },
+  activated(){
+    console.log(&apos;activated&apos;)
+    this.getData()
+    let id = this.$route.params.id;
+    if(this.$parent.keptData[id]){
+      console.log(&apos;有值恢复&apos;)
+      Object.assign(this.$data, this.$parent.keptData[id]);
+    }else{
+      console.log(&apos;无值获取&apos;)
+      //先重置所有值
+      Object.assign(this.$data, this.$options.data.call(this));
+      this.getData()
+    }
+    console.log(this.$parent.keptData)
+  },
+  beforeRouteUpdate (to, from, next) {
+    let id = this.$route.params.id;
+    let data = {}
+    Object.assign(data,this.$data); 
+    this.$parent.keptData[id] = data
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    let id = this.$route.params.id;
+    let data = {}
+    Object.assign(data,this.$data); 
+    this.$parent.keptData[id] = data
+    next()
+  },
+  computed: {
+
+  },
+  methods:{
+    getData(){
+      let arry = [];
+      for (let i = 0; i &lt; 10; i++) {
+        arry.push(Math.floor(Math.random()*10))
+      }
+      this.arry = arry;
+    },
+    copyArr(arr){
+        return arr.map((e)=&gt;{
+            if(typeof e === &apos;object&apos;){
+                return Object.assign({},e)
+            }else{
+                return e
+            }
+        })
+    }
+  },
+  props:[]
+}
+&lt;/script&gt;
+
+&lt;!-- Add &quot;scoped&quot; attribute to limit CSS to this component only --&gt;
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/23/Google-Home折腾记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Google Home折腾记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/05/小说txt下载/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小说txt下载</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" style="margin:30px;padding:10px;background:#fff;">
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "iQD3W24cfvu1WB82GuUFQoVc-gzGzoHsz",
+            app_key: "nOw3zLema3nK8AjxW5OlajW1",
+            placeholder: "",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 糯米馨
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+          由<a href="http://www.qiniu.com/">七牛云</a>提供静态存储
+          沪ICP备15018744号-1
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script>
+	var yiliaConfig = {
+		fancybox: false,
+		mathjax: false,
+		animate: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>

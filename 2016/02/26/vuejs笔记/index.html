@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vuejs笔记 | 糯米馨的自留地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="概览">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vuejs笔记">
+<meta property="og:url" content="http://yoursite.com/2016/02/26/vuejs笔记/index.html">
+<meta property="og:site_name" content="糯米馨的自留地">
+<meta property="og:description" content="概览">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-17T02:20:39.465Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vuejs笔记">
+<meta name="twitter:description" content="概览">
+  
+    <link rel="alternative" href="/atom.xml" title="糯米馨的自留地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://images.nuomixin.com/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4219fe391086c4deee240ad4925736b6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://images.nuomixin.com/avatar.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">糯米馨</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">无可救药的声控斯基</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/archives/index.html">所有文章</a></li>
+				        
+							<li><a href="/tags/亲测/index.html">亲测</a></li>
+				        
+							<li><a href="/tags/前端/index.html">前端</a></li>
+				        
+							<li><a href="/tags/tips/index.html">Tips</a></li>
+				        
+							<li><a href="/tags/笔记/index.html">笔记</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/study/" style="font-size: 10px;">study</a> <a href="/tags/tips/" style="font-size: 12px;">tips</a> <a href="/tags/亲测/" style="font-size: 18px;">亲测</a> <a href="/tags/出去浪/" style="font-size: 10px;">出去浪</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/剧集/" style="font-size: 10px;">剧集</a> <a href="/tags/后端/" style="font-size: 12px;">后端</a> <a href="/tags/图片/" style="font-size: 10px;">图片</a> <a href="/tags/声控/" style="font-size: 10px;">声控</a> <a href="/tags/笔记/" style="font-size: 16px;">笔记</a> <a href="/tags/美色/" style="font-size: 10px;">美色</a> <a href="/tags/随手记/" style="font-size: 10px;">随手记</a> <a href="/tags/随拍/" style="font-size: 14px;">随拍</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.sunxichen.com">我男神的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">无可救药的声控斯基</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">糯米馨</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://images.nuomixin.com/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">糯米馨</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">无可救药的声控斯基</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/archives/index.html">所有文章</a></li>
+		        
+					<li><a href="/tags/亲测/index.html">亲测</a></li>
+		        
+					<li><a href="/tags/前端/index.html">前端</a></li>
+		        
+					<li><a href="/tags/tips/index.html">Tips</a></li>
+		        
+					<li><a href="/tags/笔记/index.html">笔记</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/trytuorisfy" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1933249531" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto:tuorisfy@gmail.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-vuejs笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/26/vuejs笔记/" class="article-date">
+  	<time datetime="2016-02-26T03:09:01.000Z" itemprop="datePublished">2016-02-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vuejs笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a><a href="http://blog.evanyou.me/2015/10/25/vuejs-re-introduction/" target="_blank" rel="noopener">概览</a></h1><a id="more"></a>
+<h1 id="实用"><a href="#实用" class="headerlink" title="实用"></a>实用</h1><h2 id="基础模板"><a href="#基础模板" class="headerlink" title="基础模板"></a>基础模板</h2><pre><code>var object = {
+  message: &apos;Hello world!&apos;
+}
+&lt;div id=&quot;example&quot;&gt;
+  {{ message }}
+&lt;/div&gt;
+new Vue({
+  el: &apos;#example&apos;,
+  data: object
+})
+</code></pre><h2 id="http请求插件vue-resource"><a href="#http请求插件vue-resource" class="headerlink" title="http请求插件vue-resource"></a><a href="https://github.com/vuejs/vue-resource" target="_blank" rel="noopener">http请求插件vue-resource</a></h2><h2 id="vue-cli"><a href="#vue-cli" class="headerlink" title="vue-cli"></a><a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">vue-cli</a></h2><pre><code>$ npm install -g vue-cli
+$ vue init webpack my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+$ npm run build
+</code></pre><p>#重点是坑！！！</p>
+<h2 id="兄弟关系"><a href="#兄弟关系" class="headerlink" title="兄弟关系"></a>兄弟关系</h2><p>曾经我天真的以为兄弟关系是确定的，结果太打脸了，chrome那边兄弟关系是对的，看下Firefox竟然不对了，大儿子突然就变小儿子了，我的心哇凉哇凉的。只要用到兄弟关系查找元素的都歇菜了！<br>于是，机智的我只能放大招了！ 在new Vue的时候，直接把所有关系算出来赋值！哼！ 用的时候直接用  this.$root.xxxIndex 这种形式来找到序号。上个示例吧还是,假设根元素下面有2个子元素</p>
+<pre><code>//定义component
+Vue.component(&apos;first-comp&apos;,{
+  template:&apos;#first-temp&apos;,
+  data:function(){
+    return {
+      compName:&apos;first&apos;
+    }
+  },
+  methods:{
+    test:function(){
+      console.log(&apos;test&apos;)
+    }
+  }
+})
+Vue.component(&apos;second-comp&apos;,{
+  template:&apos;#second-temp&apos;,
+  data:function(){
+    return {
+      compName:&apos;second&apos;
+    }
+  }
+})  
+//new Vue
+new Vue({
+  el: &apos;#body-wrap&apos;,
+  data: {
+      firstIndex:&apos;&apos;,
+      secondIndex:&apos;&apos;,
+  },
+  ready:function(){
+      if(this.$root.$children[0].compName == &apos;first&apos;){
+          this.firstIndex = 0;
+          this.secondIndex = 1;
+      }else{
+          this.firstIndex = 1;
+          this.secondIndex = 0;           
+      }
+  }
+})
+//调用方法示例
+this.$root.$children[firstIndex].test();
+//补充：今天又看了文档，发现这个问题的解决方法是这样的[v-ref](http://vuejs.org.cn/api/#v-ref)
+//template
+&lt;comp v-ref:child&gt;&lt;/comp&gt;
+&lt;comp v-ref:some-child&gt;&lt;/comp&gt;
+// 从父组件访问
+this.$refs.child
+this.$refs.someChild
+</code></pre><h2 id="页面里的正则"><a href="#页面里的正则" class="headerlink" title="页面里的正则"></a>页面里的正则</h2><p>由于本人脑子小，要在v-for循环出来的数据里替换 &amp;gt ; &amp;lt ;(无视中间的空格) 为 &gt; 和 &lt; ,那其中的辛酸哎哟都不想提起，最后解决方案是：<br>把正则作为一个值放在js中,如下</p>
+<pre><code>//js
+data:function(){
+  return {
+    regExpGt:/&amp;gt;/g,
+    regExplt:/&amp;lt;/g          
+  }
+}    
+//html 编译问题 以下中文自己替换
+&lt;li v-for=&apos;value in items&apos;&gt;双花括号 value.replace(regExpGt,&apos;&gt;&apos;).replace(regExplt,&apos;&lt;&apos;) 双花括号&lt;/li&gt;
+</code></pre><h1 id="来个模板"><a href="#来个模板" class="headerlink" title="来个模板"></a>来个模板</h1><p><a href="https://github.com/vuejs-templates/browserify" target="_blank" rel="noopener">vuejs-templates/browserify</a><br>嘿嘿嘿，整个文件就是.vue,把html，css，js都放在里面了，刚试了一下，我只想说，你的语法要不要这么严格！！！空格不能多也不能少，分号再见。<br>还有一个很奇怪的就是，我把需要的东西放在static文件夹中，才访问的到。虽然我觉得应该是要放到src/assets这个文件夹的，但是地址总是写不对，总是404，没办法才想了其他办法，可以放static文件夹中没问题了，就先放着吧。<br>抄写几段实用的(只抄了js部分)：</p>
+<pre><code>//Hello.vue
+&lt;script&gt;
+export default {
+  data () {
+    return {
+      // note: changing this line won&apos;t causes changes
+      // with hot-reload because the reloaded component
+      // preserves its current state and we are modifying
+      // its initial state.
+      msg: &apos;Hello World!&apos;,
+      otherData: &apos;&apos;
+    }
+  },
+  ready () {//看清楚这里，和直接写在js里的写法不一样，空格注意！空格严格按照它的来空，不然你被报错刷屏了
+    var url = &apos;./static/addrule.json&apos;
+    this.$http.get(url).then(function (response) {//空格注意！
+      var data = response.data
+      console.log(data)
+      this.listData = data
+    }, function (response) {//空格注意！
+
+    })
+  }
+}
+&lt;/script&gt; 
+//App.vue
+&lt;script&gt;
+import Hello from &apos;./components/Hello&apos;
+
+export default {
+  components: {
+    Hello
+  }
+}
+&lt;/script&gt;    
+//main.js
+import Vue from &apos;vue&apos;
+import App from &apos;./App&apos;
+Vue.use(require(&apos;vue-resource&apos;)) //亮点看这里，这个插件是ajax的插件哟
+
+/* eslint-disable no-new */
+new Vue({
+  el: &apos;body&apos;,
+  components: { App }
+})
+</code></pre><h1 id="一些tips"><a href="#一些tips" class="headerlink" title="一些tips"></a>一些tips</h1><ul>
+<li><a href="http://cn.vuejs.org/guide/list.html" target="_blank" rel="noopener">列表渲染 不能检测到如下变化：</a><br>  直接用索引设置元素，如 vm.items[0] = {}；<br>  修改数据的长度，如 vm.items.length = 0。<br>解决方法：<br>  example1.items.$set(0, { childMsg: ‘Changed!’}) // 快捷的$remove()方法：this.items.$remove(item)<br>  至于问题 (2)，只需用一个空数组替换 items</li>
+<li>可以通过将 vm.$data 传入 JSON.parse(JSON.stringify(…)) 得到原始数据对象。<a href="http://cn.vuejs.org/api/#data" target="_blank" rel="noopener">链接</a></li>
+<li><a href="http://cn.vuejs.org/guide/components.html#父子组件通信" target="_blank" rel="noopener">父子组件通信</a><br>子组件可以用 this.$parent 访问它的父组件。根实例的后代可以用 this.$root 访问它。父组件有一个数组 this.$children，包含它所有的子元素</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/27/chrome修改文件及实时刷新/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          chrome修改文件及实时刷新
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/26/设计相关/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设计相关</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" style="margin:30px;padding:10px;background:#fff;">
+    <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "iQD3W24cfvu1WB82GuUFQoVc-gzGzoHsz",
+            app_key: "nOw3zLema3nK8AjxW5OlajW1",
+            placeholder: "",
+            avatar:"mm"
+        });
+    }
+</script>
+  </section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2019 糯米馨
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+          由<a href="http://www.qiniu.com/">七牛云</a>提供静态存储
+          沪ICP备15018744号-1
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+
+<script>
+	var yiliaConfig = {
+		fancybox: false,
+		mathjax: false,
+		animate: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
