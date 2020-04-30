@@ -6,15 +6,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import re
+import os
 # import xlwt
 
 browser = webdriver.PhantomJS()
 # browser = webdriver.Chrome()
 WAIT = WebDriverWait(browser, 10)
 
+count = 0
+txtName = ''
 def next_page():
     try:
-        print('获取下一页数据')
+        # print('获取下一页数据')
         next_btn = WAIT.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
                                                           '#pb_next')))
         next_btn.click()
@@ -40,7 +43,7 @@ def get_page(url):
 def save_to_txt(soup):
     title = soup.find(id='nr_title').get_text() + '\r\n'
     print(title)
-    with open('meigui.txt', 'a+', encoding='utf-8', errors='ignore') as f:
+    with open(txtName, 'a+', encoding='utf-8', errors='ignore') as f:
         f.write(title)  # 文件的写操作
     
     content = soup.find_all(id="nr1")
@@ -50,7 +53,7 @@ def save_to_txt(soup):
     for i in content:
         new_str = i.get_text('<br>', '\n')
         str = re.sub('<br>', '\r\n', new_str)  # 将文档中的<br>标签替换为换行符
-        with open('meigui.txt', 'a+', encoding='utf-8', errors='ignore') as f:
+        with open(txtName, 'a+', encoding='utf-8', errors='ignore') as f:
             f.write(str)  # 文件的写操作
 
     next_page()
@@ -59,12 +62,17 @@ def get_source():
     WAIT.until(EC.presence_of_element_located(
         (By.CSS_SELECTOR, '#nr1')))
 
+
+
     html = browser.page_source
     
     soup = BeautifulSoup(html, 'lxml')
-    print('到这')
-    # print(html)
-
+    # f.close()
+    global count 
+    global txtName 
+    if count == 0:       
+        txtName = soup.h1.get_text() + '.txt'
+    count += 1
     save_to_txt(soup)
 
 
@@ -75,8 +83,7 @@ def main():
     finally:
         browser.close()
 
-
 if __name__ == '__main__':
+   
     main()
-    # book.save('蔡徐坤篮球.xlsx')
     print('结束')
