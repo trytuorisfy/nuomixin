@@ -1,5 +1,4 @@
 # 博客备份
-放在BAE上的博客[www.nuomixin.com](www.nuomixin.com)定期备份
 
 bae官方停止维护了，所以直接放page上了
 记一笔，怕忘。
