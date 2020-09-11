@@ -9,7 +9,16 @@ import re
 import os
 # import xlwt
 
-browser = webdriver.PhantomJS()
+from selenium.webdriver import DesiredCapabilities
+
+desired_capabilities = DesiredCapabilities.PHANTOMJS.copy()
+desired_capabilities['phantomjs.page.customHeaders.User-Agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) ' \
+                                                                  'AppleWebKit/537.36 (KHTML, like Gecko) ' \
+                                                                  'Chrome/39.0.2171.95 Safari/537.36'
+browser = webdriver.PhantomJS(desired_capabilities=desired_capabilities)
+
+
+# browser = webdriver.PhantomJS()
 # browser = webdriver.Chrome()
 WAIT = WebDriverWait(browser, 10)
 
@@ -78,7 +87,7 @@ def get_source():
 
 def main():
     try:
-        url = 'https://m.meiguixs.net/html/120/120071/43850964.shtml'
+        url = 'https://m.meiguixs.net/html/127/127376/47429855.shtml'
         get_page(url)
     finally:
         browser.close()
